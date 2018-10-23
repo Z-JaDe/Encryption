@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				C9FB07E42179B2B600041EF1 /* openssl */,
-				C9FB086C2179B8EE00041EF1 /* tool */,
+				C9FB086C2179B8EE00041EF1 /* Utilities */,
 				C9FB08432179B2B600041EF1 /* Dictionary+RSA.swift */,
 				C9FB08422179B2B600041EF1 /* String+RSA.swift */,
 				C9FB08522179B46F00041EF1 /* String+Encrypt.swift */,
@@ -323,7 +323,7 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
-		C9FB086C2179B8EE00041EF1 /* tool */ = {
+		C9FB086C2179B8EE00041EF1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				C9FB07E22179B2B600041EF1 /* BBRSACryptor.h */,
@@ -331,7 +331,7 @@
 				C9FB08442179B2B600041EF1 /* FSOpenSSL.h */,
 				C9FB08452179B2B600041EF1 /* FSOpenSSL.m */,
 			);
-			path = tool;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
