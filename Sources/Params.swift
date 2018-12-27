@@ -29,11 +29,3 @@ extension Array where Element == (Hashable, Any) {
         return map {"\($0.0)\(keyValueSeparator)\($0.1)"}.joined(separator: separator)
     }
 }
-extension Array where Element == (String, String) {
-    public var paramsStr: String {
-        return self.joined(separator: "&")
-    }
-    public func joined(separator: String, keyValueSeparator: String = "=") -> String {
-        return map {"\($0.0)\(keyValueSeparator)\($0.1)"}.joined(separator: separator)
-    }
-}
