@@ -18,17 +18,17 @@ extension Dictionary {
 }
 extension Dictionary where Key: Comparable {
     public var sortedParamsStr: String {
-        return self.sorted(by: {$0.key < $1.key}).map {($0, $1)}.paramsStr
+        return self.sorted(by: {$0.key < $1.key}).map {("\($0)", $1)}.paramsStr
     }
 }
-extension Array where Element == (Hashable, Any) {
-    public var paramsStr: String {
-        return self.joined(separator: "&")
-    }
-    public func joined(separator: String, keyValueSeparator: String = "=") -> String {
-        return map {"\($0.0)\(keyValueSeparator)\($0.1)"}.joined(separator: separator)
-    }
-}
+//extension Array where Element == (Hashable, Any) {
+//    public var paramsStr: String {
+//        return self.joined(separator: "&")
+//    }
+//    public func joined(separator: String, keyValueSeparator: String = "=") -> String {
+//        return map {"\($0.0)\(keyValueSeparator)\($0.1)"}.joined(separator: separator)
+//    }
+//}
 extension Array where Element == (String, Any) {
     public var paramsStr: String {
         return self.joined(separator: "&")
