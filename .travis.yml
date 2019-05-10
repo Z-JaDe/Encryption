@@ -1,1 +1,3 @@
 language: objective-c
+xcode_project: Encryption.xcodeproj # 项目文件相对于.travis.yml文件的路径
+xcode_scheme: Encryption #你需要集成测试的scheme
