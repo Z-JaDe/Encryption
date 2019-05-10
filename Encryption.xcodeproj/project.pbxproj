@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18FB9E4422854E6B008DEBF9 /* EncryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB9E4322854E6B008DEBF9 /* EncryptionTests.swift */; };
 		C9FB07CF2179B25E00041EF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB07CE2179B25E00041EF1 /* AppDelegate.swift */; };
 		C9FB07D12179B25E00041EF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB07D02179B25E00041EF1 /* ViewController.swift */; };
 		C9FB07D42179B25E00041EF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FB07D22179B25E00041EF1 /* Main.storyboard */; };
@@ -26,7 +27,20 @@
 		C9FB086B2179B73900041EF1 /* Encryption.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C9FB086A2179B73900041EF1 /* Encryption.podspec */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		18FB9E4622854E6B008DEBF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9FB07C32179B25E00041EF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9FB07CA2179B25E00041EF1;
+			remoteInfo = Encryption;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		18FB9E4122854E6B008DEBF9 /* EncryptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncryptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FB9E4322854E6B008DEBF9 /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
+		18FB9E4522854E6B008DEBF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9FB07CB2179B25E00041EF1 /* Encryption.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encryption.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FB07CE2179B25E00041EF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9FB07D02179B25E00041EF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +151,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		18FB9E3E22854E6B008DEBF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9FB07C82179B25E00041EF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,12 +170,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18FB9E4222854E6B008DEBF9 /* EncryptionTests */ = {
+			isa = PBXGroup;
+			children = (
+				18FB9E4322854E6B008DEBF9 /* EncryptionTests.swift */,
+				18FB9E4522854E6B008DEBF9 /* Info.plist */,
+			);
+			path = EncryptionTests;
+			sourceTree = "<group>";
+		};
 		C9FB07C22179B25E00041EF1 = {
 			isa = PBXGroup;
 			children = (
 				C9FB086A2179B73900041EF1 /* Encryption.podspec */,
 				C9FB07E02179B28600041EF1 /* Sources */,
 				C9FB07CD2179B25E00041EF1 /* Encryption */,
+				18FB9E4222854E6B008DEBF9 /* EncryptionTests */,
 				C9FB07CC2179B25E00041EF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -163,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				C9FB07CB2179B25E00041EF1 /* Encryption.app */,
+				18FB9E4122854E6B008DEBF9 /* EncryptionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,6 +369,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		18FB9E4022854E6B008DEBF9 /* EncryptionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18FB9E4A22854E6B008DEBF9 /* Build configuration list for PBXNativeTarget "EncryptionTests" */;
+			buildPhases = (
+				18FB9E3D22854E6B008DEBF9 /* Sources */,
+				18FB9E3E22854E6B008DEBF9 /* Frameworks */,
+				18FB9E3F22854E6B008DEBF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18FB9E4722854E6B008DEBF9 /* PBXTargetDependency */,
+			);
+			name = EncryptionTests;
+			productName = EncryptionTests;
+			productReference = 18FB9E4122854E6B008DEBF9 /* EncryptionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C9FB07CA2179B25E00041EF1 /* Encryption */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9FB07DD2179B26000041EF1 /* Build configuration list for PBXNativeTarget "Encryption" */;
@@ -360,10 +410,14 @@
 		C9FB07C32179B25E00041EF1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = zjade;
 				TargetAttributes = {
+					18FB9E4022854E6B008DEBF9 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = C9FB07CA2179B25E00041EF1;
+					};
 					C9FB07CA2179B25E00041EF1 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -384,11 +438,19 @@
 			projectRoot = "";
 			targets = (
 				C9FB07CA2179B25E00041EF1 /* Encryption */,
+				18FB9E4022854E6B008DEBF9 /* EncryptionTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		18FB9E3F22854E6B008DEBF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9FB07C92179B25E00041EF1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,6 +466,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		18FB9E3D22854E6B008DEBF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18FB9E4422854E6B008DEBF9 /* EncryptionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9FB07C72179B25E00041EF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +492,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18FB9E4722854E6B008DEBF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9FB07CA2179B25E00041EF1 /* Encryption */;
+			targetProxy = 18FB9E4622854E6B008DEBF9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C9FB07D22179B25E00041EF1 /* Main.storyboard */ = {
@@ -443,6 +521,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		18FB9E4822854E6B008DEBF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EncryptionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjade.EncryptionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Encryption.app/Encryption";
+			};
+			name = Debug;
+		};
+		18FB9E4922854E6B008DEBF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EncryptionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjade.EncryptionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Encryption.app/Encryption";
+			};
+			name = Release;
+		};
 		C9FB07DB2179B26000041EF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -613,6 +731,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18FB9E4A22854E6B008DEBF9 /* Build configuration list for PBXNativeTarget "EncryptionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18FB9E4822854E6B008DEBF9 /* Debug */,
+				18FB9E4922854E6B008DEBF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C9FB07C62179B25E00041EF1 /* Build configuration list for PBXProject "Encryption" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
