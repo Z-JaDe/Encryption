@@ -10,7 +10,7 @@ env:
 matrix:
   include:
     - osx_image: xcode10.2
-      env: SDK="macosx10.14"        DESTINATION="arch=x86_64"                    SWIFT_VERSION="5.0" ACTION="test"
+      env: SDK="macosx10.14" SWIFT_VERSION="5.0" ACTION="test"
 
 script:
   - set -o pipefail
@@ -21,7 +21,6 @@ script:
       -project "$FRAMEWORK_NAME.xcodeproj"
       -scheme "$FRAMEWORK_NAME"
       -sdk "$SDK"
-      -destination "$DESTINATION"
       -configuration Debug
       ONLY_ACTIVE_ARCH=YES
       GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES

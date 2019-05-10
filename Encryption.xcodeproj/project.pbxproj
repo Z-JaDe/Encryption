@@ -416,7 +416,6 @@
 				TargetAttributes = {
 					18FB9E4022854E6B008DEBF9 = {
 						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = C9FB07CA2179B25E00041EF1;
 					};
 					C9FB07CA2179B25E00041EF1 = {
 						CreatedOnToolsVersion = 10.1;
@@ -524,8 +523,9 @@
 		18FB9E4822854E6B008DEBF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EncryptionTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -535,17 +535,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjade.EncryptionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Encryption.app/Encryption";
 			};
 			name = Debug;
 		};
 		18FB9E4922854E6B008DEBF9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EncryptionTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -555,9 +556,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjade.EncryptionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Encryption.app/Encryption";
 			};
 			name = Release;
 		};
@@ -682,8 +683,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MG2ZSL4NR6;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Sources/openssl/include";
 				INFOPLIST_FILE = Encryption/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -694,12 +696,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sources/openssl/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zjade.Encryption;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjade.Encryption.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Encryption/Encryption-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -708,8 +711,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MG2ZSL4NR6;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Sources/openssl/include";
 				INFOPLIST_FILE = Encryption/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -720,11 +724,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sources/openssl/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zjade.Encryption;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjade.Encryption.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Encryption/Encryption-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
