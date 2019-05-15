@@ -16,7 +16,9 @@ Pod::Spec.new do |s|
     s.frameworks            = "Foundation"
     s.swift_version         = "5.0"
 
-    s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/Sources/openssl/include' }
+    s.xcconfig = {
+      'HEADER_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/Sources/openssl/include'
+    }
 
     s.public_header_files   = "Sources/Utilities/FSOpenSSL.h"
     s.vendored_libraries    = "Sources/openssl/lib/*.a"
