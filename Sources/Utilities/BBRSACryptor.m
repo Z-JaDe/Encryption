@@ -364,7 +364,7 @@
             
             unsigned char *cipherBuffer = calloc(clen, sizeof(unsigned char));
             unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
-            RSA_public_encrypt(reallen, segmentBuffer, cipherBuffer, _rsaPublic, padding);
+            RSA_public_encrypt(reallen, segmentBuffer, cipherBuffer, _rsaPublic, (int)padding);
             
             NSData *cipherData = [[NSData alloc] initWithBytes:cipherBuffer length:clen];
             if (cipherData) {
@@ -399,7 +399,7 @@
             
             unsigned char *cipherBuffer = calloc(clen, sizeof(unsigned char));
             unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
-            RSA_public_encrypt(reallen, segmentBuffer, cipherBuffer, _rsaPrivate, padding);
+            RSA_public_encrypt(reallen, segmentBuffer, cipherBuffer, _rsaPrivate, (int)padding);
             
             NSData *cipherData = [[NSData alloc] initWithBytes:cipherBuffer length:clen];
             if (cipherData) {
@@ -434,7 +434,7 @@
             
             unsigned char *plainBuffer = calloc(mlen, sizeof(unsigned char));
             unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
-            RSA_private_decrypt(reallen, segmentBuffer, plainBuffer, _rsaPrivate, padding);
+            RSA_private_decrypt(reallen, segmentBuffer, plainBuffer, _rsaPrivate, (int)padding);
             
             NSData *plainData = [[NSData alloc] initWithBytes:plainBuffer length:strlen((char *)plainBuffer)];
             if (plainData) {
@@ -469,7 +469,7 @@
             
             unsigned char *plainBuffer = calloc(mlen, sizeof(unsigned char));
             unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
-            RSA_public_decrypt(reallen, segmentBuffer, plainBuffer, _rsaPrivate, padding);
+            RSA_public_decrypt(reallen, segmentBuffer, plainBuffer, _rsaPrivate, (int)padding);
             
             NSData *plainData = [[NSData alloc] initWithBytes:plainBuffer length:strlen((char *)plainBuffer)];
             if (plainData) {
