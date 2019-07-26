@@ -3,4 +3,4 @@ language: swift
 osx_image: xcode10.2
 xcode_project: Encryption.xcodeproj
 xcode_scheme: EncryptionTests
-xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
+xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone XR
