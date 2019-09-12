@@ -30,24 +30,39 @@ pUDvphpTFhAtOezI0I5o1QJAQr011aer/6XfKDf0sW4fIG1xN2rEgecdVPztKfyh
 """)
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("aasdasd".md5LowString)
-        print("aasdasd".md5UpperString)
-        print(try! privateKey.pemString())
-        print(try! publicKey.pemString())
-        recordingTime {
-            (0...100).forEach {_ in
-                //            print("  ")
-                encryptedAndDecrypted()
-                //            print("  ")
-                signAndVerify()
-            }
-        }
+        keychainTest()
+//        print("aasdasd".md5LowString)
+//        print("aasdasd".md5UpperString)
+//        print(try! privateKey.pemString())
+//        print(try! publicKey.pemString())
+//        recordingTime {
+//            (0...100).forEach {_ in
+//                //            print("  ")
+//                encryptedAndDecrypted()
+//                //            print("  ")
+//                signAndVerify()
+//            }
+//        }
     }
     func recordingTime(_ function:()->()){
         let start=CACurrentMediaTime()
         function()
         let end=CACurrentMediaTime()
         print("方法耗时为：\(end-start)")
+    }
+    func keychainTest() {
+        do {
+            try Keychain.setPassword("123451", service: "com.em", account: "asd")
+            try Keychain.setPassword("12345", service: "com.em1", account: "asd")
+            let password = try Keychain.password(forService: "com.em", account: "asd")
+            let accounts = try Keychain.allAccount()
+            let account = try Keychain.accounts(forService: "com.em")
+            print(accounts)
+            print(account)
+            print(password)
+        } catch let error {
+            print(error)
+        }
     }
     func signAndVerify() {
         do {

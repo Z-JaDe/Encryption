@@ -28,7 +28,7 @@ extension Key {
         let keyDict: [CFString: Any] = [
             kSecAttrKeyType: kSecAttrKeyTypeRSA,
             kSecAttrKeyClass: keyClass,
-            kSecAttrKeySizeInBits: NSNumber(value: sizeInBits),
+            kSecAttrKeySizeInBits: sizeInBits,
             kSecReturnPersistentRef: true
         ]
 

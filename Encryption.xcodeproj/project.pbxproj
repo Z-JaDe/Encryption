@@ -23,6 +23,10 @@
 		18BC698D232A3D1B00DDABFA /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC698C232A3D1B00DDABFA /* Format.swift */; };
 		18BC698F232A3EBD00DDABFA /* Key+Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC698E232A3EBD00DDABFA /* Key+Security.swift */; };
 		18BC6991232A405400DDABFA /* Key+Generate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC6990232A405400DDABFA /* Key+Generate.swift */; };
+		18BC6A9C232A500000DDABFA /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC6A9B232A500000DDABFA /* Keychain.swift */; };
+		18BC6A9E232A514D00DDABFA /* KeychainQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC6A9D232A514D00DDABFA /* KeychainQuery.swift */; };
+		18BC6AA0232A537800DDABFA /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC6A9F232A537800DDABFA /* KeychainError.swift */; };
+		18BC6AA2232A67FE00DDABFA /* KeychainQueryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC6AA1232A67FE00DDABFA /* KeychainQueryInfo.swift */; };
 		C9FB07CF2179B25E00041EF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB07CE2179B25E00041EF1 /* AppDelegate.swift */; };
 		C9FB07D12179B25E00041EF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FB07D02179B25E00041EF1 /* ViewController.swift */; };
 		C9FB07D42179B25E00041EF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FB07D22179B25E00041EF1 /* Main.storyboard */; };
@@ -77,6 +81,10 @@
 		18BC698C232A3D1B00DDABFA /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		18BC698E232A3EBD00DDABFA /* Key+Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Key+Security.swift"; sourceTree = "<group>"; };
 		18BC6990232A405400DDABFA /* Key+Generate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Key+Generate.swift"; sourceTree = "<group>"; };
+		18BC6A9B232A500000DDABFA /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		18BC6A9D232A514D00DDABFA /* KeychainQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainQuery.swift; sourceTree = "<group>"; };
+		18BC6A9F232A537800DDABFA /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
+		18BC6AA1232A67FE00DDABFA /* KeychainQueryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainQueryInfo.swift; sourceTree = "<group>"; };
 		18FB9E4322854E6B008DEBF9 /* EncryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTests.swift; sourceTree = "<group>"; };
 		18FB9E4522854E6B008DEBF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A0AEA1E5AF1CCFFC09D44B1 /* Pods_Encryption.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Encryption.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +170,17 @@
 			path = Key;
 			sourceTree = "<group>";
 		};
+		18BC6A9A232A4FE100DDABFA /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				18BC6A9B232A500000DDABFA /* Keychain.swift */,
+				18BC6A9D232A514D00DDABFA /* KeychainQuery.swift */,
+				18BC6AA1232A67FE00DDABFA /* KeychainQueryInfo.swift */,
+				18BC6A9F232A537800DDABFA /* KeychainError.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		18FB9E4222854E6B008DEBF9 /* EncryptionTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +246,7 @@
 		C9FB07E02179B28600041EF1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				18BC6A9A232A4FE100DDABFA /* Keychain */,
 				18BC68DD2329F1EB00DDABFA /* SwiftyRSA */,
 				C9FB08432179B2B600041EF1 /* Dictionary+RSA.swift */,
 				C9FB08422179B2B600041EF1 /* String+RSA.swift */,
@@ -395,9 +415,12 @@
 			files = (
 				18BC697B232A170300DDABFA /* Signature.swift in Sources */,
 				18BC6986232A338600DDABFA /* Key.swift in Sources */,
+				18BC6A9E232A514D00DDABFA /* KeychainQuery.swift in Sources */,
 				C9FB07D12179B25E00041EF1 /* ViewController.swift in Sources */,
+				18BC6AA0232A537800DDABFA /* KeychainError.swift in Sources */,
 				18BC6978232A170300DDABFA /* DataWrapper.swift in Sources */,
 				18BC697F232A170300DDABFA /* SwiftyRSAError.swift in Sources */,
+				18BC6A9C232A500000DDABFA /* Keychain.swift in Sources */,
 				18BC698D232A3D1B00DDABFA /* Format.swift in Sources */,
 				C9FB084C2179B2B600041EF1 /* Dictionary+RSA.swift in Sources */,
 				18BC697A232A170300DDABFA /* Asn1Parser.swift in Sources */,
@@ -408,6 +431,7 @@
 				18BC6982232A170800DDABFA /* ClearMessage.swift in Sources */,
 				18BC6981232A170800DDABFA /* EncryptedMessage.swift in Sources */,
 				18BC6991232A405400DDABFA /* Key+Generate.swift in Sources */,
+				18BC6AA2232A67FE00DDABFA /* KeychainQueryInfo.swift in Sources */,
 				18BC6984232A1AE900DDABFA /* ClearMessage+Sign.swift in Sources */,
 				C9FB08532179B46F00041EF1 /* String+Encrypt.swift in Sources */,
 				C9FB07CF2179B25E00041EF1 /* AppDelegate.swift in Sources */,
