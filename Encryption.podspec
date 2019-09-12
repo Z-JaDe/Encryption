@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     
     s.requires_arc          = true
     
-    s.ios.deployment_target = '9.0'
+    s.ios.deployment_target = '10.0'
     s.frameworks            = "Foundation"
     s.swift_version         = "5.0"
 
@@ -20,8 +20,8 @@ Pod::Spec.new do |s|
       'HEADER_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/Sources/openssl/include'
     }
 
-    s.public_header_files   = "Sources/Utilities/FSOpenSSL.h"
-    s.vendored_libraries    = "Sources/openssl/lib/*.a"
-    s.source_files          = "Sources/**/*.{swift,h,m}"
+    s.source_files = "Sources/**/*.{swift}"
+    s.dependency "CryptoSwift"
+    s.dependency "FunctionalSwift"
 
 end

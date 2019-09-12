@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-Encryption/Pods-Encryption-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework
+${BUILT_PRODUCTS_DIR}/FunctionalSwift/FunctionalSwift.framework

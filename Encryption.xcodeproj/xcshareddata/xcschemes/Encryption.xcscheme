@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18FB9E4022854E6B008DEBF9"
+               BlueprintIdentifier = "180A050C22EA953000AC7D19"
                BuildableName = "EncryptionTests.xctest"
                BlueprintName = "EncryptionTests"
                ReferencedContainer = "container:Encryption.xcodeproj">
@@ -52,7 +52,7 @@
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"

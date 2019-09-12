@@ -10,12 +10,13 @@ import Foundation
 
 extension String {
     public func rsaEncryptedStr(_ publicKey: String) -> String? {
-        let sign = FSOpenSSL.sign(publicKey, text: self)
-        return sign
-    }
-    public func base64(encodeWithNewlines: Bool = false) -> String? {
-        let sign = FSOpenSSL.base64(from: self, encodeWithNewlines: encodeWithNewlines)
-        return sign
+        do {
+            let clear = try ClearMessage(string: self, using: .utf8)
+            let publicKey = try PublicKey(base64Encoded: publicKey)
+            return try clear.encrypted(with: publicKey, padding: .PKCS1).base64String
+        } catch _ {
+            return nil
+        }
     }
     public func urlencode(_ charSet: CharacterSet = CharacterSet()) -> String {
         return self.addingPercentEncoding(withAllowedCharacters: charSet) ?? self

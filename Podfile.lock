@@ -1,0 +1,26 @@
+PODS:
+  - CryptoSwift (1.0.0)
+  - FunctionalSwift (1.0.0)
+
+DEPENDENCIES:
+  - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift.git`)
+  - FunctionalSwift (from `../FunctionalSwift`)
+
+EXTERNAL SOURCES:
+  CryptoSwift:
+    :git: https://github.com/krzyzanowskim/CryptoSwift.git
+  FunctionalSwift:
+    :path: "../FunctionalSwift"
+
+CHECKOUT OPTIONS:
+  CryptoSwift:
+    :commit: 5d114736f5a98caa8a0ca1c254526f1ce5688f91
+    :git: https://github.com/krzyzanowskim/CryptoSwift.git
+
+SPEC CHECKSUMS:
+  CryptoSwift: b91cc3e6902875f4baa91fdf1042c1344108a53b
+  FunctionalSwift: f74b7191c3dc62e6540983ce80c935194503172b
+
+PODFILE CHECKSUM: de1db469ff9f2ad8f6aa07cf6fcc3496b113284c
+
+COCOAPODS: 1.7.5
