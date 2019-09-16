@@ -31,18 +31,18 @@ pUDvphpTFhAtOezI0I5o1QJAQr011aer/6XfKDf0sW4fIG1xN2rEgecdVPztKfyh
     override func viewDidLoad() {
         super.viewDidLoad()
         keychainTest()
-//        print("aasdasd".md5LowString)
-//        print("aasdasd".md5UpperString)
-//        print(try! privateKey.pemString())
-//        print(try! publicKey.pemString())
-//        recordingTime {
-//            (0...100).forEach {_ in
-//                //            print("  ")
-//                encryptedAndDecrypted()
-//                //            print("  ")
-//                signAndVerify()
-//            }
-//        }
+        print("aasdasd".md5LowString)
+        print("aasdasd".md5UpperString)
+        print(try! privateKey.pemString())
+        print(try! publicKey.pemString())
+        recordingTime {
+            (0...100).forEach {_ in
+                //            print("  ")
+                encryptedAndDecrypted()
+                //            print("  ")
+                signAndVerify()
+            }
+        }
     }
     func recordingTime(_ function:()->()){
         let start=CACurrentMediaTime()
@@ -66,7 +66,7 @@ pUDvphpTFhAtOezI0I5o1QJAQr011aer/6XfKDf0sW4fIG1xN2rEgecdVPztKfyh
     }
     func signAndVerify() {
         do {
-            let string = String.random(min: 2, max: 1000)
+            let string = String.random(min: 0, max: 1000)
             let clear = try ClearMessage(string: string, using: .utf8)
             let signature = try clear.signed(with: privateKey, digestType: .sha512)
             let base64String = signature.base64String
@@ -89,7 +89,7 @@ pUDvphpTFhAtOezI0I5o1QJAQr011aer/6XfKDf0sW4fIG1xN2rEgecdVPztKfyh
     
     func encryptedAndDecrypted() {
         do {
-            let string = String.random(min: 2, max: 1000)
+            let string = String.random(min: 0, max: 1000)
 //            print("加密: \(string)")
             let clear = try ClearMessage(string: string, using: .utf8)
             let encrypted = try clear.encrypted(with: publicKey, padding: .PKCS1)
