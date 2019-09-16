@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public struct Keychain {
     public enum Key {
         public static let accountKey = "acct"

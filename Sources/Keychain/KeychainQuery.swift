@@ -16,7 +16,7 @@ public struct KeychainQuery {
         case yes
     }
     private var model: KeychainQueryInfo = KeychainQueryInfo()
-    
+
     init() {}
     init(service: String, account: String) {
         self.service = service

@@ -36,17 +36,16 @@ extension KeychainError: LocalizedError, CustomDebugStringConvertible {
     var localizedDescription: String {
         switch self {
         case .badArguments: return "Some of the arguments were invalid"
-            case .unimplemented: return "Function or operation not implemented"
-            case .param: return "One or more parameters passed to a function were not valid"
-            case .allocate: return "Failed to allocate memory"
-            case .notAvailable: return "No keychain is available. You may need to restart your computer"
-            case .duplicateItem: return "The specified item already exists in the keychain"
-            case .itemNotFound: return "The specified item could not be found in the keychain"
-            case .interactionNotAllowed: return "User interaction is not allowed"
-            case .decode: return "Unable to decode the provided data"
-            case .authFailed: return "The user name or passphrase you entered is not correct"
-        default:
-            return "Refer to SecBase.h for description"
+        case .unimplemented: return "Function or operation not implemented"
+        case .param: return "One or more parameters passed to a function were not valid"
+        case .allocate: return "Failed to allocate memory"
+        case .notAvailable: return "No keychain is available. You may need to restart your computer"
+        case .duplicateItem: return "The specified item already exists in the keychain"
+        case .itemNotFound: return "The specified item could not be found in the keychain"
+        case .interactionNotAllowed: return "User interaction is not allowed"
+        case .decode: return "Unable to decode the provided data"
+        case .authFailed: return "The user name or passphrase you entered is not correct"
+        default: return "Refer to SecBase.h for description"
         }
     }
 }
