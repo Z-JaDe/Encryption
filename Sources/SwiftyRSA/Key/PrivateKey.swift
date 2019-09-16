@@ -14,7 +14,7 @@ public struct PrivateKey: Key {
 }
 public extension PrivateKey {
     init(reference: SecKey) throws {
-        guard PrivateKey.isValidKeyReference(reference, forClass: kSecAttrKeyClassPrivate) else {
+        guard Self.isValidKeyReference(reference, forClass: kSecAttrKeyClassPrivate) else {
             throw SwiftyRSAError.notAPrivateKey
         }
         self.reference = reference
@@ -22,8 +22,8 @@ public extension PrivateKey {
     }
     init(data: Data) throws {
         self.originalData = data
-        let dataWithoutHeader = try PrivateKey.stripKeyHeader(keyData: data)
-        reference = try PrivateKey.addKey(dataWithoutHeader, isPublic: false)
+        let dataWithoutHeader = try Self.stripKeyHeader(keyData: data)
+        reference = try Self.addKey(dataWithoutHeader, isPublic: false)
     }
 }
 public extension PrivateKey {

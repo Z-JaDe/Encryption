@@ -15,7 +15,7 @@ public struct PublicKey: Key {
 }
 public extension PublicKey {
     init(reference: SecKey) throws {
-        guard PublicKey.isValidKeyReference(reference, forClass: kSecAttrKeyClassPublic) else {
+        guard Self.isValidKeyReference(reference, forClass: kSecAttrKeyClassPublic) else {
             throw SwiftyRSAError.notAPublicKey
         }
 
@@ -24,8 +24,8 @@ public extension PublicKey {
     }
     init(data: Data) throws {
         self.originalData = data
-        let dataWithoutHeader = try PublicKey.stripKeyHeader(keyData: data)
-        reference = try PublicKey.addKey(dataWithoutHeader, isPublic: true)
+        let dataWithoutHeader = try Self.stripKeyHeader(keyData: data)
+        reference = try Self.addKey(dataWithoutHeader, isPublic: true)
     }
 }
 public extension PublicKey {
