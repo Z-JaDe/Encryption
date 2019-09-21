@@ -1,6 +1,6 @@
 
 language: swift
-osx_image: xcode10.2
+osx_image: xcode11.0
 xcode_project: Encryption.xcodeproj
 xcode_scheme: EncryptionTests
 xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone XR
