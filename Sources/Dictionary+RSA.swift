@@ -2,7 +2,7 @@
 //  Dictionary.swift
 //  SNKit
 //
-//  Created by 郑军铎 on 2018/5/30.
+//  Created by ZJaDe on 2018/5/30.
 //  Copyright © 2018年 syk. All rights reserved.
 //
 

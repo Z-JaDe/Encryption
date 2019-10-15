@@ -22,40 +22,40 @@ public struct Keychain {
     public static var accessibilityType: CFString?// = kSecAttrAccessibleWhenUnlocked
 }
 extension Keychain {
-    static func password(forService service: String, account: String) throws -> String {
+    public static func password(forService service: String, account: String) throws -> String {
         var query = KeychainQuery(service: service, account: account)
         try query.fetch()
         return query.password
     }
-    static func passwordData(forService service: String, account: String) throws -> Data {
+    public static func passwordData(forService service: String, account: String) throws -> Data {
         var query = KeychainQuery(service: service, account: account)
         try query.fetch()
         return query.passwordData
     }
 }
 extension Keychain {
-    static func deletePassword(forService service: String, account: String) throws {
+    public static func deletePassword(forService service: String, account: String) throws {
         let query = KeychainQuery(service: service, account: account)
         try query.deleteItem()
     }
 }
 extension Keychain {
-    static func setPassword(_ password: String, service: String, account: String) throws {
+    public static func setPassword(_ password: String, service: String, account: String) throws {
         var query = KeychainQuery(service: service, account: account)
         query.password = password
         try query.save()
     }
-    static func setPasswordData(_ passwordData: Data, service: String, account: String) throws {
+    public static func setPasswordData(_ passwordData: Data, service: String, account: String) throws {
         var query = KeychainQuery(service: service, account: account)
         query.passwordData = passwordData
         try query.save()
     }
 }
 extension Keychain {
-    static func allAccount() throws -> [[String: Any]] {
+    public static func allAccount() throws -> [[String: Any]] {
         return try accounts(forService: "")
     }
-    static func accounts(forService service: String) throws -> [[String: Any]] {
+    public static func accounts(forService service: String) throws -> [[String: Any]] {
         let query = KeychainQuery(service: service, account: "")
         return try query.fetchAll()
     }
