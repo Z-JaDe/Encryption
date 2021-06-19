@@ -13,6 +13,6 @@ extension String {
         return md5().uppercased()
     }
     public var md5LowString: String {
-        return md5()//.lowercased()
+        return md5()// .lowercased()
     }
 }

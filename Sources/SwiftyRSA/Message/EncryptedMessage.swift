@@ -9,14 +9,14 @@
 import Foundation
 
 public struct EncryptedMessage: Base64DataWrapper {
-    ///加密好的数据
+    /// 加密好的数据
     public let data: Data
     public init(data: Data) {
         self.data = data
     }
 }
 extension EncryptedMessage {
-    ///根据私钥解密
+    /// 根据私钥解密
     public func decrypted(with key: PrivateKey, padding: Padding) throws -> ClearMessage {
         let blockSize = key.blockSize
 

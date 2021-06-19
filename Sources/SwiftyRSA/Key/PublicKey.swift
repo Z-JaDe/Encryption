@@ -40,7 +40,7 @@ public extension PublicKey {
         let publicKeyRegex = "(-----BEGIN PUBLIC KEY-----.+?-----END PUBLIC KEY-----)"
         return try? NSRegularExpression(pattern: publicKeyRegex, options: .dotMatchesLineSeparators)
     }()
-    ///批量导入
+    /// 批量导入
     static func publicKeys(pemEncoded pemString: String) -> [PublicKey] {
         guard let publicKeyRegexp = publicKeyRegex, pemString.count > 0 else {
             return []

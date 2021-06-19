@@ -15,7 +15,7 @@ public struct ClearMessage: NormalDataWrapper {
     }
 }
 extension ClearMessage {
-    ///根据公钥 加密数据
+    /// 根据公钥 加密数据
     public func encrypted(with key: PublicKey, padding: Padding) throws -> EncryptedMessage {
         let blockSize = key.blockSize
 

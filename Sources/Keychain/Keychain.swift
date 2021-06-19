@@ -18,7 +18,7 @@ public struct Keychain {
         public static let lastModifiedKey = "mdat"
         public static let whereKey = "svce"
     }
-    ///在什么条件下可以获取到里面的内容
+    /// 在什么条件下可以获取到里面的内容
     public static var accessibilityType: CFString?// = kSecAttrAccessibleWhenUnlocked
 }
 extension Keychain {
